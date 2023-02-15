@@ -1,3 +1,8 @@
-<h1>Insertar aquí un título</h1>
+<h1>{{'Title1' | translate}}</h1>
+<h1>{{'Title2' | translate}}</h1>
 
-Insertar aquí algo :c
+<select class="form-control" #language (change)="translateSite(language.value)">
+    <option *ngFor="let localization of translateService.getLangs()" [value]="localization">
+        {{ localization }}
+    </option>
+</select>
