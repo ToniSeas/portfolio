@@ -17,4 +17,5 @@ export class AppComponent {
   translateSite(language: string) {
     this.translateService.use(language);
   }
+  
 }
