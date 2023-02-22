@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild, ViewEncapsulation, ElementRef } from '@angular/core';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { ReactApp } from './components/react-home/react-app';
+import { ReactApp } from './react-app';
 
 const containerName = 'ReactComponentContainer';
 
