@@ -1,5 +1,4 @@
-import * as React from 'react';
-import { FunctionComponent, useState } from 'react';
+import { Text } from '../../contexts/language-context/language-context';
 
 type AppProps = {};
 
@@ -7,7 +6,7 @@ export const ReactHome = ({}: AppProps) => {
 
   return (
     <div>
-      Hola Mundo
+      <Text tid='ttest'/>
     </div>
   );
 };

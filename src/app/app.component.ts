@@ -10,6 +10,7 @@ export class AppComponent {
   title = 'frontend';
 
   constructor(public translateService: TranslateService) {
+    console.log("%c Portafolio creado por Antony Seas", "background-color: green");
     translateService.addLangs(['es', 'en']);
     translateService.setDefaultLang('es');
   }
