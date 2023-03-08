@@ -1,3 +1,18 @@
-/* You can add global styles to this file, and also import other style files */
-@import url("../node_modules/bootstrap/dist/css/bootstrap.min.css")
+:root {
+    --bg-main-color: #0a192f;
+    --bg-navbar-color: #0a192f;
+    --font-main-color: #ccd6f6;
+    --decoration-color: #64ffda;
+    --font-sans: "Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
+    --font-mono: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
+}
 
+body {
+    background-color: var(--bg-main-color);
+    color: var(--font-main-color);
+}
+
+body * {
+    color: var(--font-main-color);
+    font-family: var(--font-mono);
+}

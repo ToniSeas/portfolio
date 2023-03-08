@@ -8,11 +8,23 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { ReactWrapperComponent } from './react/react-wrapper';
+import { MainMenuComponent } from './components/main-menu/main-menu.component';
+import { NgbCollapseModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { SidenavComponent } from './components/main-menu/sidenav/sidenav.component';
+import { NavbarComponent } from './components/main-menu/navbar/navbar.component';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HomeComponent } from './components/home/home.component';
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
     declarations: [
         AppComponent,
-        ReactWrapperComponent
+        ReactWrapperComponent,
+        MainMenuComponent,
+        SidenavComponent,
+        NavbarComponent,
+        HomeComponent
     ],
     providers: [],
     bootstrap: [AppComponent],
@@ -26,7 +38,12 @@ import { ReactWrapperComponent } from './react/react-wrapper';
                 useFactory: (httpClient: HttpClient) => { return new TranslateHttpLoader(httpClient); },
                 deps: [HttpClient],
             },
-        })
+        }),
+        NgbModule,
+        NgbCollapseModule,
+        BrowserAnimationsModule,
+        MatSidenavModule,
+        MatIconModule
     ]
 })
 export class AppModule { }
