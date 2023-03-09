@@ -9,6 +9,7 @@ export class MainMenuComponent implements OnInit {
 
   public isMinWidth = false;
   private minWidth:number = 750;
+  public isMenuCollapsed = true;
 
   constructor() {}
 
@@ -23,6 +24,10 @@ export class MainMenuComponent implements OnInit {
 
   private checkMinWidth() {
     this.isMinWidth = (window.innerWidth < this.minWidth);
+  }
+
+  toggleMenuCollapse() {
+    this.isMenuCollapsed = !this.isMenuCollapsed;
   }
 
 }

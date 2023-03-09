@@ -1,0 +1,194 @@
+.my-navbar-container {
+    /* Begin of structure */
+    display: flex;
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 1020 !important;
+    width: 100%;
+    min-width: 180px;
+    text-align: left;
+    margin-bottom: 10px;
+    /* End of structure */
+
+    /* Begin of styles */
+    background-color: var(--bg-navbar-color);
+    /* End of styles */
+}
+
+.my-navbar-container>.my-navbar {
+    --my-navbar-height: 70px;
+    /* Begin of structure */
+    display: flex !important;
+    position: relative;
+    width: 100%;
+    height: var(--my-navbar-height);
+    /* End of structure */
+}
+
+.my-navbar-container>.my-navbar * {
+    /* Begin of structure */
+    text-decoration: none;
+    /* End of structure */
+}
+
+.my-navbar>.my-navbar-logo {
+    /* Begin of structure */
+    margin-left: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
+    /* End of structure */
+
+    /*Begin of styles*/
+    font-size: 25px;
+    font-weight: bolder;
+    -webkit-text-stroke: 0.5px var(--decoration-color);
+    /*End of styles*/
+}
+
+.my-navbar>.my-nav-menu-container {
+    /*Begin of structure*/
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-left: auto;
+    margin-right: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    --my-nav-menu-container-min-width: 180px;
+    min-width: var(--my-nav-menu-container-min-width);
+    height: var(--my-navbar-height);
+    /*End of structure*/
+
+    /*Begin of Styles*/
+    background-color: var(--bg-navbar-color);
+    /*End of Styles*/
+}
+
+.my-navbar>.my-nav-menu-container>.my-nav-menu {
+    width: 100%;
+    height: 100%;
+}
+
+.my-nav-option>.my-nav-link {
+    display: flex;
+}
+
+.my-nav-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--decoration-color);
+    border: 1px solid var(--decoration-color);
+    border-radius: 3px;
+    margin-right: 1px;
+    transform: scale(0.8);
+}
+
+/*======Begin of Sidenav mode======*/
+
+.my-nav-menu-toggle {
+    display: flex;
+    margin-left: auto;
+    padding: 20px;
+    background-color: var(--bg-navbar-color);
+    border: none;
+}
+
+.my-nav-menu-toggle>.my-toggle-menu-icon {
+    transform: scale(1.5);
+}
+
+.my-navbar>.my-nav-menu-container>.my-nav-menu.my-sidebar-mode {
+    /*Begin of Structure*/
+    position: fixed;
+    height: calc(100vh - var(--my-navbar-height));
+    width: 100%;
+    max-width: var(--my-nav-menu-container-min-width);
+    text-align: left;
+    top: inherit;
+    right: 0;
+    z-index: 1000;
+    border-left: 1px solid var(--decoration-color);
+    /*End of Structure*/
+
+    /*Begin of Styles*/
+    background-color: var(--bg-navbar-color);
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    /*End of Styles*/
+}
+
+.my-navbar>.my-nav-menu-container>.my-nav-menu.my-sidebar-mode>.my-nav-options-container {
+    /*Begin of Structure*/
+    height: 100%;
+    width: 100%;
+    padding-left: 0;
+    overflow-y: auto !important;
+    overflow-x: hidden;
+    position: relative;
+    display: flex !important;
+    flex-direction: column;
+    /*End of Structure*/
+}
+
+.my-navbar>.my-nav-menu-container>.my-nav-menu.my-sidebar-mode.hide {
+    /*Begin of Structure*/
+    right: calc(var(--my-nav-menu-container-min-width) * -1);
+    /*End of Structure*/
+
+    /*Begin of Styles*/
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    /*End of Styles*/
+}
+
+.my-navbar>.my-nav-menu-container>.my-nav-menu.my-sidebar-mode>.my-nav-options-container>.my-nav-option {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    height: 35px;
+    background-color: transparent;
+
+    list-style-position: inside;
+    margin-bottom: 10px;
+}
+
+/*======End of Sidenav mode======*/
+
+/*======Begin of Navbar mode======*/
+
+.my-navbar>.my-nav-menu-container>.my-nav-menu.my-navbar-mode>.my-nav-options-container {
+    /*Begin of Structure*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: 10px;
+    margin-top: auto;
+    margin-bottom: auto;
+    overflow-x: auto !important;
+    overflow-y: hidden;
+    /*End of Structure*/
+}
+
+.my-navbar>.my-nav-menu-container>.my-nav-menu>.my-nav-options-container>.my-nav-option {
+    /*Begin of Structure*/
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    /*End of Structure*/
+}
+/*======End of Navbar mode======*/
+

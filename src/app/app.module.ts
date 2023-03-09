@@ -10,8 +10,6 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { ReactWrapperComponent } from './react/react-wrapper';
 import { MainMenuComponent } from './components/main-menu/main-menu.component';
 import { NgbCollapseModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { SidenavComponent } from './components/main-menu/sidenav/sidenav.component';
-import { NavbarComponent } from './components/main-menu/navbar/navbar.component';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './components/home/home.component';
@@ -22,8 +20,6 @@ import {MatIconModule} from '@angular/material/icon';
         AppComponent,
         ReactWrapperComponent,
         MainMenuComponent,
-        SidenavComponent,
-        NavbarComponent,
         HomeComponent
     ],
     providers: [],
