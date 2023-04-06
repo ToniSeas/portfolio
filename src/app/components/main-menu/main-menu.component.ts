@@ -1,4 +1,5 @@
 import { Component, HostListener, OnInit } from '@angular/core';
+import { right } from '@popperjs/core';
 
 @Component({
   selector: 'app-main-menu',
@@ -38,19 +39,19 @@ export class MainMenuComponent implements OnInit {
   async animateSidenavOpening(timeMs: number, radius: number) {
     this.playingSidenavAnimation = true;
     const element = <HTMLElement>document.getElementsByClassName('my-sidebar-mode')[0];
-    element.style.transition = `all ${timeMs}ms`
+  
+    let rightMs = timeMs;
 
     while (timeMs > 5) {
       this.borderRadiusLeft(element, radius);
       await this.sleep(timeMs);
       timeMs = timeMs / 2;
       radius = radius / 2;
-      element.style.transition = `border-radius ${timeMs}ms`
+      element.style.transition = `border-radius ${timeMs}ms, right ${rightMs}ms`
       this.borderRadiusLeft(element, 0);
       await this.sleep(timeMs);
     }
 
-    element.style.transition = `right 0.5s`
     this.playingSidenavAnimation = false;
   }
 
