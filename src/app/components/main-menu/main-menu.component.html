@@ -3,8 +3,9 @@
 		<a class="my-navbar-logo" [routerLink]="'.'">Antony Seas</a>
 
 		<div class="my-nav-menu-container">
+			
 			<button *ngIf="this.isMinWidth" class="my-nav-menu-toggle" (click)="this.toggleMenuCollapse()">
-				<mat-icon [ngClass]="'my-toggle-menu-icon'">menu</mat-icon>
+				<app-hamburger-button [size]="3" [rotate]="!this.isMenuCollapsed"></app-hamburger-button>
 			</button>
 			<div class="my-nav-menu" [ngClass]="{'my-sidebar-mode': this.isMinWidth, 'my-navbar-mode': !this.isMinWidth, 
 			'hide':this.isMenuCollapsed && this.isMinWidth}">

@@ -10,17 +10,21 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { ReactWrapperComponent } from './react/react-wrapper';
 import { MainMenuComponent } from './components/main-menu/main-menu.component';
 import { NgbCollapseModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import {MatSidenavModule} from '@angular/material/sidenav';
+import { MatSidenavModule } from '@angular/material/sidenav';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './components/home/home.component';
-import {MatIconModule} from '@angular/material/icon';
+import { MatIconModule } from '@angular/material/icon';
+import { MouseTrailComponent } from './components/mouse-trail/mouse-trail.component';
+import { HamburgerButtonComponent } from './components/main-menu/hamburger-button/hamburger-button.component';
 
 @NgModule({
     declarations: [
         AppComponent,
         ReactWrapperComponent,
         MainMenuComponent,
-        HomeComponent
+        HomeComponent,
+        MouseTrailComponent,
+        HamburgerButtonComponent
     ],
     providers: [],
     bootstrap: [AppComponent],

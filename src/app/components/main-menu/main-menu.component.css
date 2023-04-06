@@ -93,6 +93,7 @@
     margin-left: auto;
     padding: 20px;
     background-color: var(--bg-navbar-color);
+    height: 100%;
     border: none;
 }
 
@@ -103,20 +104,20 @@
 .my-navbar>.my-nav-menu-container>.my-nav-menu.my-sidebar-mode {
     /*Begin of Structure*/
     position: fixed;
-    height: calc(100vh - var(--my-navbar-height));
+    height: calc(100% - var(--my-navbar-height));
     width: 100%;
     max-width: var(--my-nav-menu-container-min-width);
     text-align: left;
     top: inherit;
     right: 0;
     z-index: 1000;
-    border-left: 1px solid var(--decoration-color);
     /*End of Structure*/
 
     /*Begin of Styles*/
-    background-color: var(--bg-navbar-color);
-    transition: all 0.5s;
-    -webkit-transition: all 0.5s;
+    border-left: 5px solid var(--decoration-color);
+    background-color: var(--bg-secondary-color);   
+    transition: right 0.5s;
+    -webkit-transition: right 0.5s;
     /*End of Styles*/
 }
 
@@ -139,8 +140,8 @@
     /*End of Structure*/
 
     /*Begin of Styles*/
-    transition: all 0.5s;
-    -webkit-transition: all 0.5s;
+    transition: right 0.5s;
+    -webkit-transition: right 0.5s;
     /*End of Styles*/
 }
 
